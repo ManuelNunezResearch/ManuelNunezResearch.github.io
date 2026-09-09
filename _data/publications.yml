@@ -1,3 +1,54 @@
+# ============================================================
+# HOW TO ADD A NEW PUBLICATION
+#
+# Valid types:
+#   journal
+#   conference
+#   chapter
+#
+# The page automatically sorts years from newest to oldest.
+# Within the same year, publications keep the order used here.
+#
+# Link rules:
+#   - only url  -> title links to the external page / DOI
+#   - only pdf  -> title links to the local PDF
+#   - url + pdf -> title links to the external page and [PDF]
+#                  is shown after the reference
+# ============================================================
+
+# Example: JOURNAL ARTICLE WITH EXTERNAL LINK
+#
+# - type: 'journal'
+#   year: 2027
+#   title: 'Title of the paper'
+#   authors: 'Author One, Author Two, Manuel Núñez.'
+#   details: 'Journal Name 25(3): 101-120.'
+#   pdf: ''
+#   url: 'https://doi.org/10.xxxx/xxxxx'
+
+
+# Example: CONFERENCE PAPER WITH LOCAL PDF
+#
+# - type: 'conference'
+#   year: 2027
+#   title: 'Title of the conference paper'
+#   authors: 'Author One, Manuel Núñez.'
+#   details: '25th Int. Conf. on Example Conference, EXAMPLE''27, pages: 10-20, IEEE.'
+#   pdf: '/papers/2027-EXAMPLE.pdf'
+#   url: ''
+
+
+# Example: CHAPTER WITH EXTERNAL LINK AND PDF
+#
+# - type: 'chapter'
+#   year: 2027
+#   title: 'Title of the book chapter'
+#   authors: 'Author One, Manuel Núñez.'
+#   details: 'Book Title, LNCS 12345, pages: 100-120, Springer.'
+#   pdf: '/papers/2027-CHAPTER.pdf'
+#   url: 'https://doi.org/10.xxxx/xxxxx'
+
+
 - type: 'journal'
   year: 2026
   title: 'Combining a novel metric and categorical boosting to better estimate rare event likelihood: Use in traffic accidents'
