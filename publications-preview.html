@@ -37,7 +37,11 @@ permalink: /publications-preview/
 {% endif %}
 
 <li>
+{% if pub.authors_html and pub.authors_html != "" %}
 {{ pub.authors_html }}
+{% else %}
+{{ pub.authors }}
+{% endif %}
 {% if pub.url != "" %}
 <a href="{{ pub.url }}">{{ pub.title }}</a>.
 {% elsif pub.pdf != "" %}
@@ -45,7 +49,11 @@ permalink: /publications-preview/
 {% else %}
 {{ pub.title }}.
 {% endif %}
+{% if pub.details_html and pub.details_html != "" %}
 {{ pub.details_html }}
+{% else %}
+{{ pub.details }}
+{% endif %}
 {% if pub.url != "" and pub.pdf != "" %}
 <a href="{{ pub.pdf }}">[PDF]</a>
 {% endif %}
