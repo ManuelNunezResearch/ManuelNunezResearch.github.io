@@ -47,10 +47,8 @@ permalink: /conferences/
 
 <h2>Previous events</h2>
 
-{% assign has_previous = false %}
 {% for block in all_years %}
   {% if block.year < current_year %}
-    {% assign has_previous = true %}
     <h3>{{ block.year }}</h3>
     <ul>
     {% for event in block.events %}
@@ -67,9 +65,6 @@ permalink: /conferences/
   {% endif %}
 {% endfor %}
 
-{% if has_previous == false %}
-<p>No previous yearly events listed yet.</p>
-{% endif %}
 
 <p>
 Earlier activities can be found <a href="/conferences/manuel-nunezs-involvement-in-previous-scientific-events/">
