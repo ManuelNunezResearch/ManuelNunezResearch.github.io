@@ -495,6 +495,72 @@ e-mail: <a href="mailto:mn@sip.ucm.es">mn@sip.ucm.es</a></p>
 <script type='text/javascript' src='/wp-content/themes/panoramic/library/js/skip-link-focus-fixc6bb.js?ver=1.0.86' id='panoramic-skip-link-focus-fix-js-js'></script>
 <script type='text/javascript' src='/wp-includes/js/wp-embed.min080f.js?ver=5.8.2' id='wp-embed-js'></script>
 
+<script>
+(function () {
+
+    function cleanPath(path) {
+        path = path.replace(/\/index\.html$/, '/');
+        return path || '/';
+    }
+
+    /* Si alguien llega mediante .../index.html,
+       mostramos la URL limpia sin recargar la página. */
+    if (window.location.pathname.endsWith('/index.html')) {
+        const clean =
+            cleanPath(window.location.pathname) +
+            window.location.search +
+            window.location.hash;
+
+        window.history.replaceState(null, '', clean);
+    }
+
+    const menu = document.querySelector('#menu-main-menu');
+    if (!menu) return;
+
+    /* Quitamos la selección que heredamos de la página Main. */
+    menu.querySelectorAll('li').forEach(function (li) {
+        li.classList.remove(
+            'current-menu-item',
+            'current_page_item',
+            'current-menu-ancestor',
+            'current_page_ancestor'
+        );
+    });
+
+    const current = cleanPath(window.location.pathname);
+
+    menu.querySelectorAll('a').forEach(function (a) {
+
+        if (a.origin !== window.location.origin) return;
+
+        const target = cleanPath(a.pathname);
+
+        /* Los enlaces del menú quedan también sin index.html. */
+        if (a.pathname.endsWith('/index.html')) {
+            a.href = target;
+        }
+
+        let active = false;
+
+        if (target === '/') {
+            active = current === '/';
+        } else {
+            active = current.startsWith(target);
+        }
+
+        if (active) {
+            const li = a.closest('li');
+            if (li) {
+                li.classList.add(
+                    'current-menu-item',
+                    'current_page_item'
+                );
+            }
+        }
+    });
+
+})();
+</script>
 </body>
 
 </html>
