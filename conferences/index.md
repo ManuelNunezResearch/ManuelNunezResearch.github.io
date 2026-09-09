@@ -9,7 +9,6 @@ permalink: /conferences/
 
 <h1>Committees, Conferences, Workshops and Summer Schools</h1>
 
-<h2>Permanent committees and editorial activities</h2>
 
 {% if site.data.committees.permanent %}
 <ul>
