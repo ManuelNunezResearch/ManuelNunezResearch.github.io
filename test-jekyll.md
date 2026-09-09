@@ -1,4 +1,4 @@
-﻿---
+---
 layout: default
 title: Página de prueba
 permalink: /test-jekyll/
