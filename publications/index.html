@@ -20,49 +20,40 @@ permalink: /publications/
 {% endcase %}
 
 {% assign pubs = site.data.publications | where: "type", type %}
-{% assign previous_year = nil %}
+{% assign years = pubs | map: "year" | uniq | sort | reverse %}
 
-{% for pub in pubs %}
+{% for year in years %}
 
-{% if pub.year != previous_year %}
+<h4>{{ year }}</h4>
 
-{% unless previous_year == nil %}
-</ul>
-{% endunless %}
-
-<h4>{{ pub.year }}</h4>
 <ul>
 
-{% assign previous_year = pub.year %}
-{% endif %}
+{% assign year_pubs = pubs | where: "year", year %}
+
+{% for pub in year_pubs %}
 
 <li>
-{% if pub.authors_html and pub.authors_html != "" %}
-{{ pub.authors_html }}
+{{ pub.authors | escape }}
+
+{% if pub.url and pub.url != "" %}
+<a href="{{ pub.url | escape }}">{{ pub.title | escape }}</a>.
+{% elsif pub.pdf and pub.pdf != "" %}
+<a href="{{ pub.pdf | escape }}">{{ pub.title | escape }}</a>.
 {% else %}
-{{ pub.authors }}
+{{ pub.title | escape }}.
 {% endif %}
-{% if pub.url != "" %}
-<a href="{{ pub.url }}">{{ pub.title }}</a>.
-{% elsif pub.pdf != "" %}
-<a href="{{ pub.pdf }}">{{ pub.title }}</a>.
-{% else %}
-{{ pub.title }}.
-{% endif %}
-{% if pub.details_html and pub.details_html != "" %}
-{{ pub.details_html }}
-{% else %}
-{{ pub.details }}
-{% endif %}
-{% if pub.url != "" and pub.pdf != "" %}
-<a href="{{ pub.pdf }}">[PDF]</a>
+
+{{ pub.details | escape }}
+
+{% if pub.url and pub.url != "" and pub.pdf and pub.pdf != "" %}
+<a href="{{ pub.pdf | escape }}">[PDF]</a>
 {% endif %}
 </li>
 
 {% endfor %}
 
-{% unless previous_year == nil %}
 </ul>
-{% endunless %}
+
+{% endfor %}
 
 {% endfor %}
