@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<h1>PCs and scientific events {{ page.year }}</h1>
+
+{% assign events = site.data.committees[page.year] %}
+
+{% if events and events.size > 0 %}
+<ul>
+{% for event in events %}
+  <li>
+    {% if event.url %}
+      <a href="{{ event.url }}">{{ event.name }}</a>
+    {% else %}
+      {{ event.name }}
+    {% endif %}
+    {% if event.role %} ({{ event.role }}){% endif %}
+  </li>
+{% endfor %}
+</ul>
+{% else %}
+<p>Information will be added shortly.</p>
+{% endif %}
+
+<p><a href="/conferences/">← Current committees and conferences</a></p>
