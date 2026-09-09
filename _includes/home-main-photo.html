@@ -1,0 +1,12 @@
+{% assign photo = site.data.photos.main %}
+
+<aside id="media_image-3" class="widget widget_media_image">
+  <h2 class="widget-title">{{ photo.title }}</h2>
+  <img
+    src="/assets/photos/{{ photo.file }}"
+    class="image attachment-full size-full"
+    alt="{{ photo.alt | escape }}"
+    loading="lazy"
+    style="max-width: 100%; height: auto;"
+  />
+</aside>
