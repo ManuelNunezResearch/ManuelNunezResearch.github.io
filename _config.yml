@@ -1,0 +1,10 @@
+title: Manuel Núñez
+description: Personal academic website of Manuel Núñez
+url: "https://manuelnunezresearch.github.io"
+baseurl: ""
+
+markdown: kramdown
+
+exclude:
+  - README.md
+  - "*.bak"
