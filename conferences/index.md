@@ -72,8 +72,6 @@ permalink: /conferences/
 {% endif %}
 
 <p>
-Earlier activities can be found in these
-<a href="/conferences/manuel-nunezs-involvement-in-previous-scientific-events/">
-previous scientific events
-</a>.
+Earlier activities can be found <a href="/conferences/manuel-nunezs-involvement-in-previous-scientific-events/">
+here</a>.
 </p>
