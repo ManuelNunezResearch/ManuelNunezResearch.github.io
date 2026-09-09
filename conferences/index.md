@@ -1,18 +1,37 @@
 ---
 layout: default
-title: Current committees and conferences
+title: Committees, Conferences, Workshops and Summer Schools
 permalink: /conferences/
 ---
 
-{% assign current_year = site.time | date: "%Y" %}
-{% assign year_number = current_year | plus: 0 %}
-{% assign events = site.data.committees[year_number] %}
+{% assign current_year = site.time | date: "%Y" | plus: 0 %}
+{% assign all_years = site.data.committees.years | sort: "year" | reverse %}
 
-<h1>Current events</h1>
+<h1>Committees, Conferences, Workshops and Summer Schools</h1>
 
-{% if events and events.size > 0 %}
+<h2>Permanent committees and editorial activities</h2>
+
+{% if site.data.committees.permanent %}
 <ul>
-{% for event in events %}
+{% for item in site.data.committees.permanent %}
+  <li>{{ item.text }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+<h2>Current events</h2>
+
+{% assign current_block = nil %}
+{% for block in all_years %}
+  {% if block.year == current_year %}
+    {% assign current_block = block %}
+  {% endif %}
+{% endfor %}
+
+{% if current_block and current_block.events and current_block.events.size > 0 %}
+<p>During {{ current_year }} I am involved in the following events:</p>
+<ul>
+{% for event in current_block.events %}
   <li>
     {% if event.url %}
       <a href="{{ event.url }}">{{ event.name }}</a>
@@ -27,10 +46,35 @@ permalink: /conferences/
 <p>No events currently listed for {{ current_year }}.</p>
 {% endif %}
 
-<h1>Previous events</h1>
+<h2>Previous events</h2>
+
+{% assign has_previous = false %}
+{% for block in all_years %}
+  {% if block.year < current_year %}
+    {% assign has_previous = true %}
+    <h3>{{ block.year }}</h3>
+    <ul>
+    {% for event in block.events %}
+      <li>
+        {% if event.url %}
+          <a href="{{ event.url }}">{{ event.name }}</a>
+        {% else %}
+          {{ event.name }}
+        {% endif %}
+        {% if event.role %} ({{ event.role }}){% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endfor %}
+
+{% if has_previous == false %}
+<p>No previous yearly events listed yet.</p>
+{% endif %}
 
 <p>
+Earlier activities can be found in these
 <a href="/conferences/manuel-nunezs-involvement-in-previous-scientific-events/">
-Previous scientific events
-</a>
+previous scientific events
+</a>.
 </p>

@@ -1,1 +1,45 @@
-2026: []
+permanent:
+  - text: 'I am the Regional Editor for Europe of the <a href="https://www.ijpe-online.com/">International Journal of Performability Engineering</a>.'
+  - text: 'I am a member of the Editorial Board of <a href="https://www.springer.com/series/8851">Transactions on Computational Collective Intelligence</a> and an Associate Editor of the <a href="https://www.worldscientific.com/worldscinet/vjcs">Vietnam Journal of Computer Science</a>.'
+  - text: 'I am a member of the <a href="https://rs.ieee.org/technical-activities/technical-committees/system-and-software-assurance.html">IEEE Reliability Society Technical Committee on Systems and Software Assurance</a> and of the IEEE SMC Technical Committee on Computational Collective Intelligence.'
+  - text: 'I am a member of the Board of Directors of the Tarot Summer School on Software Testing.'
+  - text: 'I am a member of the QRS Steering Committee.'
+  - text: 'I am a member of the ICCCI Senior Programme Committee.'
+  - text: 'I am a member of the A-MOST Steering Committee.'
+  - text: 'I am a member of the SEFM Steering Committee.'
+  - text: 'I was a member of the ICTSS Steering Committee (formerly TestCom/FATES) for the period 2009–2012 and of the DisCoTec Steering Committee for the period 2019–2024.'
+
+years:
+  - year: 2026
+    events:
+      - name: "ICECCS 2026: 30th Int. Conf. on Engineering of Complex Computer Systems"
+        role: "PC Member"
+        url: "https://formal-analysis.com/iceccs/2026/"
+
+      - name: "ACIIDS 2026: 18th Asian Conference on Intelligent Information and Database Systems"
+        role: "PC Member"
+        url: "https://aciids.pwr.edu.pl/2026/"
+
+      - name: "ICCCI 2026: 18th Int. Conf. on Computational Collective Intelligence – Technologies and Applications"
+        role: "PC Member"
+        url: "https://iccci.pwr.edu.pl/2026/"
+
+      - name: "QRS 2026: 26th IEEE Int. Conf. on Software Quality, Reliability & Security"
+        role: "PC Member"
+        url: "https://qrs26.techconf.org/"
+
+      - name: "ICCIES 2026: 2nd Int. Conf. on Computational Intelligence in Engineering Science"
+        role: "PC Member"
+        url: "https://iccies.tdtu.edu.vn/"
+
+      - name: "SSBSE 2026: 18th Symposium on Search-Based Software Engineering"
+        role: "PC Member"
+        url: "https://conf.researchr.org/home/ssbse-2026"
+
+      - name: "ICTSS 2026: 38th IFIP Int. Conf. on Testing Software and Systems"
+        role: "PC Member"
+        url: "https://www.ictss2026.org/"
+
+      - name: "DSA 2026: 13th Int. Conf. on Dependable Systems and their Applications"
+        role: "PC Co-Chair"
+        url: "https://dsa26.techconf.org/"
