@@ -10,24 +10,39 @@ permalink: /conferences/manuel-nunezs-involvement-in-previous-scientific-events/
 {% assign yearly_events = site.data.committees.years | sort: "year" | reverse %}
 
 {% for block in yearly_events %}
-  {% if block.year < current_year %}
 
-    <h2>{{ block.year }}</h2>
+{% if block.year < current_year %}
 
-    <ul>
-    {% for event in block.events %}
-      <li>
-        {% if event.url %}
-          <a href="{{ event.url }}">{{ event.name }}</a>
-        {% else %}
-          {{ event.name }}
-        {% endif %}
-        {% if event.role %} ({{ event.role }}){% endif %}
-      </li>
-    {% endfor %}
-    </ul>
+<h2>{{ block.year }}</h2>
 
-  {% endif %}
+<ul>
+
+{% for event in block.events %}
+
+<li>
+
+{% if event.html %}
+
+{{ event.html }}
+
+{% else %}
+
+{% if event.url %}
+<a href="{{ event.url }}">{{ event.name }}</a>
+{% else %}
+{{ event.name }}
+{% endif %}
+
+{% if event.role %} ({{ event.role }}){% endif %}
+
+{% endif %}
+
+</li>
+
 {% endfor %}
 
-{% include previous-events-legacy.html %}
+</ul>
+
+{% endif %}
+
+{% endfor %}
