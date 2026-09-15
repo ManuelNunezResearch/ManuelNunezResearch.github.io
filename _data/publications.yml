@@ -490,6 +490,15 @@
   url: ''
 
 - type: 'conference'
+  year: 2026
+  title: 'MT4DT: Metamorphic Testing for Digital Twins'
+  authors: 'Philipp Zech, Sascha Hammes, Manuel Núñez.'
+  details: '19th IEEE International Conference on Software Testing, Verification and Validation, ICST’26, Short Papers, Vision and Emerging Results, pages: 498-502, IEEE Computer Society.'
+  pdf: '/papers/2026-ICST_NIER.pdf'
+  url: ''
+
+
+- type: 'conference'
   year: 2023
   title: 'Improving the Expected Goal value in football using Multilayer Perceptron Networks'
   authors: 'Manuel Méndez, Carlos Montero, Manuel Núñez.'
