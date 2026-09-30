@@ -491,6 +491,15 @@
 
 - type: 'conference'
   year: 2026
+  title: 'A Systematic Explainability Framework for Hybrid Spatio-Temporal Models Based on Integrated Gradients'
+  authors: 'Manuel Méndez, Manuel Núñez, Juan Manuel Vara.'
+  details: '18th Int. Conf. on Computational Collective Intelligence: Technologies and Applications, ICCCI’26, LNAI 16908, pages: 244-258, Springer.'
+  pdf: '/papers/2026-ICCCI.pdf'
+  url: ''
+
+
+- type: 'conference'
+  year: 2026
   title: 'MT4DT: Metamorphic Testing for Digital Twins'
   authors: 'Philipp Zech, Sascha Hammes, Manuel Núñez.'
   details: '19th IEEE International Conference on Software Testing, Verification and Validation, ICST’26, Short Papers, Vision and Emerging Results, pages: 498-502, IEEE Computer Society.'
@@ -686,7 +695,7 @@
   year: 2012
   title: 'Preventing Attacks by Classifying User Models in a Collaborative Scenario'
   authors: 'César Andrés, Alberto Núñez, Manuel Núñez.'
-  details: '4th Int. Conf. on Computational Collective Intelligence: Technologies and Applications, LNAI 7653, pages: 505-514, Springer.'
+  details: '4th Int. Conf. on Computational Collective Intelligence: Technologies and Applications, ICCCI’12, LNAI 7653, pages: 505-514, Springer.'
   pdf: '/papers/2012-ICCCI.pdf'
   url: ''
 
