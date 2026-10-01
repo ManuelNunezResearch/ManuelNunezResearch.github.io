@@ -82,6 +82,10 @@ years:
         role: "PC Co-Chair"
         url: "https://dsa26.techconf.org/"
 
+      - name: "ISSSR 2026: 12th International Symposium on System and Software Reliability"
+        role: "PC Member"
+        url: "https://isssr25.techconf.org/"
+
   - year: 2025
     events:
       - html: >-
@@ -102,6 +106,8 @@ years:
           <a href="https://sefm-conference.github.io/2025/">SEFM 2025: 23rd Int. Conf. on Software Engineering and Formal Methods</a> (General Chair)
       - html: >-
           <a href="https://conf.researchr.org/home/ssbse-2025">SSBSE 2025: 17th Symposyum on Search-Based Software Engineering</a> (PC Member)
+	- html: >-
+          <a href="https://isssr25.techconf.org/">ISSSR 2025: 11th International Symposium on System and Software Reliability</a> (PC Member)
 
   - year: 2024
     events:
@@ -119,6 +125,9 @@ years:
           <a href="https://conf.researchr.org/home/ssbse-2024">SSBSE 2024: 16th Symposyum on Search-Based Software Engineering</a> (PC Member)
       - html: >-
           <a href="https://dsa24.techconf.org/">DSA 2024: 11th Int. Conf. on Dependable Systems and their Applications</a> (PC Member)
+	- html: >-
+          <a href="https://isssr24.techconf.org/">ISSSR 2024: 10th International Symposium on System and Software Reliability</a> (PC Member)
+
 
   - year: 2023
     events:
@@ -142,6 +151,9 @@ years:
           <a href="https://conf.researchr.org/home/ssbse-2023">SSBSE 2023: 15th Symposyum on Search-Based Software Engineering</a> (PC Member)
       - html: >-
           <a href="https://qrs23.techconf.org/">QRS 2023: 23rd IEEE International Conference on Software Quality, Reliability &amp; Security</a> (PC Member)
+	- html: >-
+          <a href="https://isssr23.techconf.org/">ISSSR 2023: 9th International Symposium on System and Software Reliability</a> (PC Member)
+
 
   - year: 2022
     events:
@@ -159,6 +171,9 @@ years:
           <a href="https://iccci.pwr.edu.pl/2022/">ICCCI 2022: 14th Int. Conf. on Computational Collective Intelligence – Technologies and Applications </a>(PC Member)
       - html: >-
           <a href="https://qrs22.techconf.org/">QRS 2022: 22nd IEEE International Conference on Software Quality, Reliability &amp; Security</a> (PC Member)
+      - html: >-
+          <a href="https://isssr22.techconf.org/">ISSSR 2022: 8th International Symposium on System and Software Reliability</a> (PC Member)
+
 
   - year: 2021
     events:
@@ -182,6 +197,9 @@ years:
           <a href="https://conf.researchr.org/home/ssbse-2021">SSBSE 2021: 13th Symposyum on Search-Based Software Engineering</a> (PC Member)
       - html: >-
           <a href="https://dsa21.techconf.org/">DSA 2021: 8th Int. Conf. on Dependable Systems and their Applications</a> (PC Member)
+      - html: >-
+          <a href="https://isssr21.techconf.org/">ISSSR 2021: 7th International Symposium on System and Software Reliability</a> (PC Member)
+
 
   - year: 2020
     events:
@@ -196,7 +214,7 @@ years:
       - html: >-
           <a href="http://home.ing.unisannio.it/ictss2020/">ICTSS 2020: 32nd IFIP Int. Conf. on Testing Software and Systems</a> (PC Member)
       - html: >-
-          <a href="https://isssr20.techconf.org/">ISSSR 2020: 6th IEEE International Symposium on System and Software Reliability</a> (PC Member)
+          <a href="https://isssr20.techconf.org/">ISSSR 2020: 6th International Symposium on System and Software Reliability</a> (PC Member)
       - html: >-
           <a href="https://qrs20.techconf.org/">QRS 2020: 6th IEEE International Conference on Software Quality, Reliability &amp; Security</a> (PC Member)
 
@@ -213,7 +231,7 @@ years:
       - html: >-
           <a href="http://iccci.sigappfr.org/">ICCCI 2019: 11th Int. Conf. on Computational Collective Intelligence &#8211; Technologies and Applications </a>(PC Member)
       - html: >-
-          <a href="https://isssr19.techconf.org/">ISSSR 2019: 5th IEEE International Symposium on System and Software Reliability</a> (PC Chair)
+          <a href="https://isssr19.techconf.org/">ISSSR 2019: 5th International Symposium on System and Software Reliability</a> (PC Chair)
       - html: >-
           <a href="https://qrs19.techconf.org/">QRS 2019: 5th IEEE International Conference on Software Quality, Reliability &amp; Security</a> (PC Member)
       - html: >-
@@ -240,7 +258,7 @@ years:
       - html: >-
           <a href="http://paris.utdallas.edu/qrs18/">QRS 2018: 4th IEEE International Conference on Software Quality, Reliability &amp; Security</a> (PC Member)
       - html: >-
-          <a href="http://paris.utdallas.edu/isssr18">ISSSR 2018: 4th IEEE International Symposium on System and Software Reliability</a> (PC Member)
+          <a href="http://paris.utdallas.edu/isssr18">ISSSR 2018: 4th International Symposium on System and Software Reliability</a> (PC Member)
       - html: >-
           <a href="https://aciids.pwr.edu.pl/2018/">ACIIDS 2018: 10th Asian Conference on Intelligent Information and Database Systems</a> (PC Member, Special Sessions co-Chair, Doctoral Track co-Chair)
       - html: >-
