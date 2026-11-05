@@ -52,21 +52,6 @@ permanent:
 
 years:
 
-- year: 2027
-    events:
-
-      - name: "ICCIES 2027: 3rd Int. Conf. on Computational Intelligence in Engineering Science"
-        role: "PC Member"
-        url: "https://iccies.tdtu.edu.vn/2027/"
-
-      - name: "ICST 2027: 20th IEEE International Conference on Software Testing, Verification and Validation"
-        role: "PC Member"
-        url: "https://conf.researchr.org/home/icst-2027"
-
-      - name: "ISSSR 2027: 13th International Symposium on System and Software Reliability"
-        role: "PC Co-Chair"
-        url: "https://isssr27.techconf.org/"
-
 - year: 2026
     events:
 
