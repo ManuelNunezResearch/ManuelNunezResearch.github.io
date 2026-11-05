@@ -6,6 +6,11 @@
              },
     "gallery":  [
                     {
+                        "file":  "2020_07.jpg",
+                        "orientation":  "portrait",
+                        "caption":  "July 2020""
+                    },
+                    {
                         "file":  "2019_02_recife.jpg",
                         "orientation":  "portrait",
                         "caption":  "February 2019"
