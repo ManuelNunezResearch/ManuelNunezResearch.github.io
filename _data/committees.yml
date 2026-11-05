@@ -34,6 +34,7 @@ permanent:
       The <a href="https://iccci.pwr.edu.pl/2026/">last edition</a>
       of the conference took place in Heraklion (Greece).
 
+  - html: >-
       I am a member of the SEFM Steering Committee.
       The <a href="https://sefm-conference.github.io/2025/">last edition</a>
       of the conference took place in Toledo (Spain).
@@ -56,7 +57,7 @@ permanent:
 
 years:
 
-- year: 2026
+  - year: 2026
     events:
 
       - name: "ICECCS 2026: 30th Int. Conf. on Engineering of Complex Computer Systems"
