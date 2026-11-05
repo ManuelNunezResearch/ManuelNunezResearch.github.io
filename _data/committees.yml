@@ -16,7 +16,7 @@ permanent:
 
   - html: >-
       I am a member of the Board of Directors of the Tarot Summer School on Software Testing.
-      The <a href="https://tarot2025.dieti.unina.it/">last edition</a>
+      The <a href="https://tarot26.github.io/">last edition</a>
       of the Summer School took place in Naples (Italy).
 
   - html: >-
@@ -25,7 +25,7 @@ permanent:
       of the workshop took place in Naples (Italy), collocated with ICST 2025.
 
   - html: >-
-      I am a member of the ICCCI Senior Programme Committee.
+      I am a member of the ICCCI Steering Committee.
       The <a href="https://iccci.pwr.edu.pl/2026/">last edition</a>
       of the conference took place in Heraklion (Greece).
 
@@ -52,7 +52,22 @@ permanent:
 
 years:
 
-  - year: 2026
+- year: 2026
+    events:
+
+      - name: "ICCIES 2027: 3rd Int. Conf. on Computational Intelligence in Engineering Science"
+        role: "PC Member"
+        url: "https://iccies.tdtu.edu.vn/2027/"
+
+      - name: "ICST 2027: 20th IEEE International Conference on Software Testing, Verification and Validation"
+        role: "PC Member"
+        url: "https://conf.researchr.org/home/icst-2027"
+
+      - name: "ISSSR 2027: 13th International Symposium on System and Software Reliability"
+        role: "PC Co-Chair"
+        url: "https://isssr27.techconf.org/"
+
+- year: 2026
     events:
 
       - name: "ICECCS 2026: 30th Int. Conf. on Engineering of Complex Computer Systems"
@@ -73,7 +88,7 @@ years:
 
       - name: "ICCIES 2026: 2nd Int. Conf. on Computational Intelligence in Engineering Science"
         role: "PC Member"
-        url: "https://iccies.tdtu.edu.vn/"
+        url: "https://iccies.tdtu.edu.vn/2026/"
 
       - name: "SSBSE 2026: 18th Symposium on Search-Based Software Engineering"
         role: "PC Member"
