@@ -1,90 +1,101 @@
-(function () {
-
-    async function loadPhotos() {
-        try {
-            const response = await fetch('/assets/photos/photos.json', {
-                cache: 'no-cache'
-            });
-
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("/assets/photos/photos.json", { cache: "no-store" })
+        .then(function (response) {
             if (!response.ok) {
-                throw new Error('Cannot load photos.json');
+                throw new Error("Could not load photos.json");
             }
+            return response.json();
+        })
+        .then(function (data) {
 
-            const data = await response.json();
+            // --------------------------------------------------
+            // MAIN PHOTO
+            // --------------------------------------------------
 
-            /* FOTO PRINCIPAL */
-            const mainWidget = document.getElementById('media_image-3');
+            if (data.main) {
+                var mainWidget = document.querySelector("#media_image-3");
 
-            if (mainWidget && data.main) {
-                const title = mainWidget.querySelector('.widget-title');
-                const img = mainWidget.querySelector('img');
+                if (mainWidget) {
+                    var title = mainWidget.querySelector(".widget-title");
+                    var img = mainWidget.querySelector("img");
 
-                if (title) {
-                    title.textContent = data.main.title || '';
-                }
-
-                if (img) {
-                    img.src = '/assets/photos/' + data.main.file;
-                    img.alt = data.main.alt || '';
-
-                    /* Evita que WordPress conserve otra versión antigua */
-                    img.removeAttribute('srcset');
-                    img.removeAttribute('sizes');
-                    img.removeAttribute('width');
-                    img.removeAttribute('height');
-
-                    img.style.maxWidth = '100%';
-                    img.style.height = 'auto';
-                }
-            }
-
-            /* GALERÍA */
-            const gallery = document.getElementById('gallery-1');
-
-            if (gallery && Array.isArray(data.gallery)) {
-                gallery.innerHTML = '';
-
-                data.gallery.forEach(function (photo) {
-                    const figure = document.createElement('figure');
-                    figure.className = 'gallery-item';
-
-                    const icon = document.createElement('div');
-                    icon.className =
-                        'gallery-icon ' +
-                        (photo.orientation || 'landscape');
-
-                    const img = document.createElement('img');
-                    img.src = '/assets/photos/' + photo.file;
-                    img.className = 'attachment-full size-full';
-                    img.alt = photo.caption || '';
-                    img.loading = 'lazy';
-
-                    icon.appendChild(img);
-                    figure.appendChild(icon);
-
-                    if (photo.caption) {
-                        const caption = document.createElement('figcaption');
-                        caption.className =
-                            'wp-caption-text gallery-caption';
-                        caption.textContent = photo.caption;
-                        figure.appendChild(caption);
+                    if (title && data.main.title) {
+                        title.textContent = data.main.title;
                     }
 
-                    gallery.appendChild(figure);
-                });
+                    if (img && data.main.file) {
+                        img.src = "/assets/photos/" + data.main.file;
+                        img.alt = data.main.alt || "";
+
+                        img.removeAttribute("srcset");
+                        img.removeAttribute("sizes");
+                        img.removeAttribute("width");
+                        img.removeAttribute("height");
+
+                        if (data.main.width) {
+                            img.style.width = data.main.width + "px";
+                        } else {
+                            img.style.width = "auto";
+                        }
+
+                        img.style.maxWidth = "100%";
+                        img.style.height = "auto";
+                    }
+                }
             }
 
-        } catch (error) {
-            console.error('Photo configuration not loaded:', error);
-            /* No hacemos nada:
-               permanecen las fotos originales del HTML. */
-        }
-    }
+            // --------------------------------------------------
+            // HISTORICAL GALLERY
+            // --------------------------------------------------
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', loadPhotos);
-    } else {
-        loadPhotos();
-    }
+            if (Array.isArray(data.gallery)) {
+                var gallery = document.querySelector("#gallery-1");
 
-})();
+                if (gallery) {
+                    gallery.innerHTML = "";
+
+                    data.gallery.forEach(function (photo) {
+                        if (!photo.file) {
+                            return;
+                        }
+
+                        var item = document.createElement("dl");
+                        item.className = "gallery-item";
+
+                        var icon = document.createElement("dt");
+                        icon.className = "gallery-icon " + (photo.orientation || "");
+
+                        var link = document.createElement("a");
+                        link.href = "/assets/photos/" + photo.file;
+
+                        var img = document.createElement("img");
+                        img.src = "/assets/photos/" + photo.file;
+                        img.alt = photo.caption || "";
+                        img.loading = "lazy";
+                        img.style.maxWidth = "100%";
+                        img.style.height = "auto";
+
+                        link.appendChild(img);
+                        icon.appendChild(link);
+                        item.appendChild(icon);
+
+                        if (photo.caption) {
+                            var caption = document.createElement("dd");
+                            caption.className = "wp-caption-text gallery-caption";
+                            caption.textContent = photo.caption;
+                            item.appendChild(caption);
+                        }
+
+                        gallery.appendChild(item);
+                    });
+
+                    var clear = document.createElement("br");
+                    clear.style.clear = "both";
+                    gallery.appendChild(clear);
+                }
+            }
+        })
+        .catch(function (error) {
+            console.error("Could not update homepage photos:", error);
+        });
+});

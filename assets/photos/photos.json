@@ -2,7 +2,8 @@
     "main":  {
                  "file":  "2025_04.jpg",
                  "title":  "April 2025",
-                 "alt":  ""
+                 "alt":  "",
+                 "width":  300
              },
     "gallery":  [
                     {
