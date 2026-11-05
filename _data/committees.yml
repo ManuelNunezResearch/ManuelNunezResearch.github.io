@@ -54,6 +54,7 @@ years:
 
 - year: 2027
     events:
+
       - name: "ICCIES 2027: 3rd Int. Conf. on Computational Intelligence in Engineering Science"
         role: "PC Member"
         url: "https://iccies.tdtu.edu.vn/2027/"
